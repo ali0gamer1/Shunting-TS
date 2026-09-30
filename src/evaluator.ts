@@ -98,7 +98,7 @@ export function createDefaultRegistry() {
 
 
     registry.registerFunction(new FunctionSpec({
-        symbol: 'factorial',
+        symbol: 'fact',
         fixedArity: true,
         arity: 1,
         operation: op<[number]>(([num]) => {
