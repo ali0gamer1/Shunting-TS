@@ -105,11 +105,13 @@ export function createDefaultRegistry() {
             if (num < 0) {
                 throw new Error("Negative factorial not allowed");
             }
-            let result = 1;
+            let res = 1;
             for (let i = 1; i <= num; i++) {
-                result *= i;
+
+                res *= i;
+            
             }
-            return result;
+            return res;
         })
     }));
 
