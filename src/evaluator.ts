@@ -26,7 +26,7 @@ const getUserInput = (query: string): Promise<string> => getReadline().question(
 
 
 
-function createDefaultRegistry() {
+export function createDefaultRegistry() {
     const registry = new Registry();
 
     registry.registerOperator(new OperatorSpec({
