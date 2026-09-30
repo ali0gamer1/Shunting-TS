@@ -97,6 +97,29 @@ export function createDefaultRegistry() {
     }));
 
 
+
+
+
+    
+    registry.registerFunction(new FunctionSpec({
+        symbol: 'Fact',
+        fixedArity: true,
+        arity: 1,
+        operation: op<[number]>(([num]) => {
+            if (num < 0) {
+                throw new Error("Negative factorial not allowed");
+            }
+            
+            let result = 1;
+            for (let i = 1; i <= num; i++) {
+                result *= i;
+            }
+
+            return result;
+        })
+    }));
+
+
     registry.registerFunction(new FunctionSpec({
         symbol: 'sqrt',
         fixedArity: true,
