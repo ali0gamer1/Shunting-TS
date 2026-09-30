@@ -106,6 +106,13 @@ export function createDefaultRegistry() {
         })
     }));
 
+    registry.registerFunction(new FunctionSpec({
+	symbol: "double",
+	fixedArity: true,
+	arity: 1,
+	operation: op<[number]>(([num]) => num * 2)
+    }));
+
 
     registry.registerFunction(new FunctionSpec(
         {

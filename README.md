@@ -115,7 +115,7 @@ registry.registerFunction(new FunctionSpec({
 	symbol: "double",
 	fixedArity: true,
 	arity: 1,
-	operation: (args) => args[0]! * 2
+	operation: op<[number]>(([num]) => num * 2)
 }));
 
 console.log(evaluate("double(4) + 3")); // 11
@@ -158,7 +158,7 @@ registry.registerFunction(new FunctionSpec({
 	symbol: "id",
 	fixedArity: true,
 	arity: 1,
-	operation: (args) => args[0]!
+	operation: op<[number]>(([num]) => num)
 }));
 
 console.log(evaluate("10 % 3 + id(2)")); // 3
